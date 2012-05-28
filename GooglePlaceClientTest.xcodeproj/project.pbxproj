@@ -65,6 +65,8 @@
 		2282E90B1573772E001A549B /* GPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282E90A1573772C001A549B /* GPEvent.m */; };
 		2282E90E15737746001A549B /* GPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282E90D15737743001A549B /* GPObject.m */; };
 		2282E9121573814C001A549B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2282E91115738144001A549B /* Main.storyboard */; };
+		2282E91515738200001A549B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282E914157381FF001A549B /* ViewController.m */; };
+		2282E9181573823D001A549B /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282E9171573823A001A549B /* PlacesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +180,10 @@
 		2282E90C15737742001A549B /* GPObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPObject.h; sourceTree = "<group>"; };
 		2282E90D15737743001A549B /* GPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPObject.m; sourceTree = "<group>"; };
 		2282E91115738144001A549B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2282E913157381FD001A549B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2282E914157381FF001A549B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2282E91615738238001A549B /* PlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewController.h; sourceTree = "<group>"; };
+		2282E9171573823A001A549B /* PlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,10 @@
 				2282E80915734765001A549B /* AppDelegate.m */,
 				2282E80015734765001A549B /* Supporting Files */,
 				2282E91115738144001A549B /* Main.storyboard */,
+				2282E913157381FD001A549B /* ViewController.h */,
+				2282E914157381FF001A549B /* ViewController.m */,
+				2282E91615738238001A549B /* PlacesTableViewController.h */,
+				2282E9171573823A001A549B /* PlacesTableViewController.m */,
 			);
 			path = GooglePlaceClientTest;
 			sourceTree = "<group>";
@@ -529,6 +539,8 @@
 				2282E90415736836001A549B /* NSString+MD5.m in Sources */,
 				2282E90B1573772E001A549B /* GPEvent.m in Sources */,
 				2282E90E15737746001A549B /* GPObject.m in Sources */,
+				2282E91515738200001A549B /* ViewController.m in Sources */,
+				2282E9181573823D001A549B /* PlacesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,8 +24,8 @@
 #define GP_Param_Sensor @"sensor"
 #define GP_Param_Keyword @"Keyword"
 #define GP_Param_Rankby @"rankby"
-#define GP_Param_Rankby_Prominence @"Prominence"
-#define GP_Param_Rankby_Distance @"Distance"
+#define GP_Param_Rankby_Prominence @"prominence"
+#define GP_Param_Rankby_Distance @"distance"
 
 #define GP_ReturnStatus_OK @"OK"
 #define GP_ReturnStatus_ZERO_RESULTS @"ZERO_RESULTS"
@@ -121,7 +121,8 @@ typedef enum{
     [parameterSet setParameterForKey:GP_Param_Keyword withValue:keyword];
     [parameterSet setParameterForKey:GP_Param_Name withValue:name];
     [parameterSet setParameterForKey:GP_Param_Types withValue:[types componentsJoinedByString:@"|"]];
-    [parameterSet setParameterForKey:GP_Param_Radius withValue:[NSString stringWithFormat:@"%d", radius]];
+//    [parameterSet setParameterForKey:GP_Param_Radius withValue:[NSString stringWithFormat:@"%d", radius]];
+    [parameterSet setParameterForKey:GP_Param_Rankby withValue:GP_Param_Rankby_Distance];
     
     NSString* fullURLString = [NSString stringWithFormat:@"%@?%@", GP_URLString, [parameterSet description]];
     NSLog(@"%@", fullURLString);
@@ -131,7 +132,8 @@ typedef enum{
     request.didFinishSelector = @selector(searchRequestFinished:);
     
     if (completionHandler){
-        [self.completionHandlers setObject:completionHandler forKey:[NSValue valueWithNonretainedObject:request]];
+        id handler = completionHandler;
+        [self.completionHandlers setObject:[[handler copy] autorelease] forKey:[NSValue valueWithNonretainedObject:request]];
     }
     
     [self.requestQueue addOperation:request];

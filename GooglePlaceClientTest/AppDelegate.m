@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "GooglePlaceClient.h"
 
 @implementation AppDelegate
@@ -24,23 +23,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    
-    GooglePlaceClient* client = [GooglePlaceClient sharedClient];
-    [client searchPlacesWithLocation:CLLocationCoordinate2DMake(40.058359,116.307629) keyword:nil name:nil types:[NSArray arrayWithObjects:@"food", nil] radius:500 completionHandler:^(NSArray* places, NSError* error){
-        if (error == nil){
-            [places enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop){
-                GPObject* gpObj = obj;
-                NSLog(@"%@", gpObj.properties);
-            }];
-        }else{
-            NSLog(@"%@", [error localizedDescription]);
-        }
-    }];
+//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//    // Override point for customization after application launch.
+//    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+//    self.window.rootViewController = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    [self.window makeKeyAndVisible];
+//    
+//    GooglePlaceClient* client = [GooglePlaceClient sharedClient];
+//    [client searchPlacesWithLocation:CLLocationCoordinate2DMake(40.058359,116.307629) keyword:nil name:nil types:[NSArray arrayWithObjects:@"food", nil] radius:500 completionHandler:^(NSArray* places, NSError* error){
+//        if (error == nil){
+//            [places enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop){
+//                GPObject* gpObj = obj;
+//                NSLog(@"%@", gpObj.properties);
+//            }];
+//        }else{
+//            NSLog(@"%@", [error localizedDescription]);
+//        }
+//    }];
     
     return YES;
 }
