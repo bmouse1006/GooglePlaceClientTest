@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222E37FF157498D40023472F /* CLLocation+geometricaddon.m in Sources */ = {isa = PBXBuildFile; fileRef = 222E37FE157498D40023472F /* CLLocation+geometricaddon.m */; };
+		222E380C1574D6D80023472F /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222E380B1574D6D80023472F /* PlaceDetailsViewController.m */; };
 		2282E7FA15734765001A549B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2282E7F915734765001A549B /* UIKit.framework */; };
 		2282E7FC15734765001A549B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2282E7FB15734765001A549B /* Foundation.framework */; };
 		2282E7FE15734765001A549B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2282E7FD15734765001A549B /* CoreGraphics.framework */; };
@@ -70,6 +72,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		222E37FD157498D40023472F /* CLLocation+geometricaddon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+geometricaddon.h"; sourceTree = "<group>"; };
+		222E37FE157498D40023472F /* CLLocation+geometricaddon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+geometricaddon.m"; sourceTree = "<group>"; };
+		222E380A1574D6D80023472F /* PlaceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailsViewController.h; sourceTree = "<group>"; };
+		222E380B1574D6D80023472F /* PlaceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailsViewController.m; sourceTree = "<group>"; };
 		2282E7F515734765001A549B /* GooglePlaceClientTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlaceClientTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2282E7F915734765001A549B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2282E7FB15734765001A549B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -205,6 +211,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222E37F7157496C80023472F /* CLLocationAddtion */ = {
+			isa = PBXGroup;
+			children = (
+				222E37FD157498D40023472F /* CLLocation+geometricaddon.h */,
+				222E37FE157498D40023472F /* CLLocation+geometricaddon.m */,
+			);
+			path = CLLocationAddtion;
+			sourceTree = "<group>";
+		};
 		2282E7EA15734764001A549B = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +255,7 @@
 		2282E7FF15734765001A549B /* GooglePlaceClientTest */ = {
 			isa = PBXGroup;
 			children = (
+				222E37F7157496C80023472F /* CLLocationAddtion */,
 				2282E817157347F5001A549B /* powered-by-google */,
 				2282E81615734771001A549B /* GooglePlaceClient */,
 				2282E80815734765001A549B /* AppDelegate.h */,
@@ -250,6 +266,8 @@
 				2282E914157381FF001A549B /* ViewController.m */,
 				2282E91615738238001A549B /* PlacesTableViewController.h */,
 				2282E9171573823A001A549B /* PlacesTableViewController.m */,
+				222E380A1574D6D80023472F /* PlaceDetailsViewController.h */,
+				222E380B1574D6D80023472F /* PlaceDetailsViewController.m */,
 			);
 			path = GooglePlaceClientTest;
 			sourceTree = "<group>";
@@ -541,6 +559,8 @@
 				2282E90E15737746001A549B /* GPObject.m in Sources */,
 				2282E91515738200001A549B /* ViewController.m in Sources */,
 				2282E9181573823D001A549B /* PlacesTableViewController.m in Sources */,
+				222E37FF157498D40023472F /* CLLocation+geometricaddon.m in Sources */,
+				222E380C1574D6D80023472F /* PlaceDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +662,7 @@
 				2282E81515734765001A549B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 #import "PlacesTableViewController.h"
 #import "GPSearchResult.h"
+#import "PlaceDetailsViewController.h"
 
 @interface PlacesTableViewController ()
 
@@ -128,6 +129,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PlaceDetailsViewController* controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PlaceDetailsViewController"];
+    GPSearchResult* place = [self.places objectAtIndex:indexPath.row];
+    controller.reference = place.reference;
+    
+    [self.navigationController pushViewController:controller animated:YES];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

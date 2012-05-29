@@ -53,14 +53,14 @@
 -(void)search:(id)sender{
     __block typeof (self) blockSelf = self;
 
-    [[GooglePlaceClient sharedClient] searchPlacesWithLocation:CLLocationCoordinate2DMake([self.latitudeField.text doubleValue], [self.longitudeField.text doubleValue]) keyword:nil name:nil types:[NSArray arrayWithObjects:@"food", nil] radius:10000 completionHandler:^(NSArray* results, NSError* error){
+    [[GooglePlaceClient sharedClient] searchPlacesWithLocation:CLLocationCoordinate2DMake([self.latitudeField.text doubleValue], [self.longitudeField.text doubleValue]) keyword:nil name:nil types:[NSArray arrayWithObjects:@"atm", nil] radius:10000 completionHandler:^(NSArray* results, NSError* error){
         if (error == nil){
             [blockSelf showSearchResults:results];
 //            [self viewDidLoad];
         }else{
             
         }
-    }];
+    } context:self];
 }
 
 -(void)showSearchResults:(NSArray*)results{

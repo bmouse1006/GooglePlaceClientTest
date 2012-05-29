@@ -18,8 +18,10 @@ typedef void(^GooglePlaceDetailsHandler)(GPDetailResult* detail, NSError* error)
 
 +(id)sharedClient;
 
--(void)searchPlacesWithLocation:(CLLocationCoordinate2D)location keyword:(NSString*)keyword name:(NSString*)name types:(NSArray*)types radius:(NSUInteger)radius completionHandler:(GooglePlaceSearchHandler)completionHandler;
+-(void)searchPlacesWithLocation:(CLLocationCoordinate2D)location keyword:(NSString*)keyword name:(NSString*)name types:(NSArray*)types radius:(NSUInteger)radius completionHandler:(GooglePlaceSearchHandler)completionHandler context:(id)context;
 
--(void)queryDetailsWithPlaceReferenceCode:(NSString*)referenceCode completionHandler:(GooglePlaceDetailsHandler)completionHandler;
+-(void)queryDetailsWithPlaceReferenceCode:(NSString*)referenceCode completionHandler:(GooglePlaceDetailsHandler)completionHandler context:(id)context;
+
+-(void)clearAndCancelRequestWithContext:(id)context;
 
 @end
