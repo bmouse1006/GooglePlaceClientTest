@@ -106,7 +106,6 @@ typedef enum{
     if ([language isEqualToString:@"zh-Hant"]){
         language = @"zh-TW";
     }
-    
     return language;
 }
 

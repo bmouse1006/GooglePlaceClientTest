@@ -14,5 +14,6 @@
 @property (retain) NSString* event_id;
 @property (retain) NSString* summary;
 @property (retain) NSString* url;
+@property (retain) NSDate* startTime;
 
 @end

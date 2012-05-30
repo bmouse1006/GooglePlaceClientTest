@@ -10,7 +10,7 @@
 
 @implementation GPEvent
 
-@dynamic event_id, summary, url;
+@dynamic event_id, summary, url, startTime;
 
 -(NSString*)event_id{
     return [self.properties objectForKey:@"event_id"];
@@ -22,6 +22,10 @@
 
 -(NSString*)url{
     return [self.properties objectForKey:@"url"];
+}
+
+-(NSDate*)startTime{
+    return [NSDate dateWithTimeIntervalSince1970:[[self.properties objectForKey:@"startTime"] longValue]];
 }
 
 @end
