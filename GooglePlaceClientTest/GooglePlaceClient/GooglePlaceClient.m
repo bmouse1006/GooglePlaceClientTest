@@ -11,8 +11,6 @@
 #import "SBJson.h"
 #import "URLParameterSet.h"
 
-#define GooglePlace_API_KEY @"AIzaSyBvmZwGwDvTmChQqTSplIjy3CDbf2icZhM" //place your key here
-
 #define GP_URLString_Search @"https://maps.googleapis.com/maps/api/place/search/json"
 #define GP_URLString_Detail @"https://maps.googleapis.com/maps/api/place/details/json"
 #define GP_Param_Location @"location"
@@ -107,6 +105,13 @@ typedef enum{
         language = @"zh-TW";
     }
     return language;
+}
+
+static NSString* GooglePlace_API_KEY = nil; //place your key here
+
++(void)setAPIKey:(NSString*)APIKey{
+    [GooglePlace_API_KEY release];
+    GooglePlace_API_KEY = [APIKey copy];
 }
 
 +(id)sharedClient{
